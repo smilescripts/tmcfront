@@ -6,16 +6,11 @@ $this->breadcrumbs=array(
 	'Pengaduans'=>array('index'),
 	$model->kode_pengaduan,
 );
-
-$this->menu=array(
-	array('label'=>'List Pengaduan', 'url'=>array('index')),
-	array('label'=>'Create Pengaduan', 'url'=>array('create')),
-	array('label'=>'Update Pengaduan', 'url'=>array('update', 'id'=>$model->kode_pengaduan)),
-	array('label'=>'Delete Pengaduan', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->kode_pengaduan),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Pengaduan', 'url'=>array('admin')),
-);
 ?>
-
+<div class="notifications success">
+                            <p><span>Berhasil!</span> Terimakasih Atas Partisipasi Anda.</p>
+                            <span class="closer">x</span>
+                        </div>
 <h1>View Pengaduan #<?php echo $model->kode_pengaduan; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
