@@ -13,7 +13,7 @@
                         <div class="outertight">
                         	<ul class="block">
 							<?php 
-								$viewberita=mysql_query("select * from berita where status='aktif' order by akses desc limit 10");
+								$viewberita=mysql_query("select * from berita where status='aktif' order by tanggal_posting desc limit 10");
 								while($getberita=mysql_fetch_object($viewberita)){
 							?>
                                 <li>
@@ -39,7 +39,7 @@
                         <div class="outertight m-r-no">
                         	<ul class="block">
                               <?php 
-								$viewberitap=mysql_query("select * from berita where status='aktif' order by tanggal_posting desc limit 10");
+								$viewberitap=mysql_query("select * from berita where status='aktif' order by akses desc limit 10");
 								while($getberitap=mysql_fetch_object($viewberitap)){
 							?>
                                 <li>
