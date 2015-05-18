@@ -59,7 +59,7 @@
                                         <span>26 May, 2013.</span>
                                         <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
                                     </p>
-                                    <span class="rating"><span style="width:80%;"></span></span>
+                                    
                                 </li>
                                 <li>
                                     <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/10.png" alt="MyPassion" class="alignleft" /></a>
