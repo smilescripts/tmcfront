@@ -6,17 +6,26 @@ $this->breadcrumbs=array(
 	'Jadwal Sims'=>array('index'),
 	$model->kode_jadwal,
 );
-
-$this->menu=array(
-	array('label'=>'List JadwalSim', 'url'=>array('index')),
-	array('label'=>'Create JadwalSim', 'url'=>array('create')),
-	array('label'=>'Update JadwalSim', 'url'=>array('update', 'id'=>$model->kode_jadwal)),
-	array('label'=>'Delete JadwalSim', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->kode_jadwal),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage JadwalSim', 'url'=>array('admin')),
-);
 ?>
 
-<h1>View JadwalSim #<?php echo $model->kode_jadwal; ?></h1>
+<h1>Jadwal Sim Keliling #<?php echo $model->kode_jadwal; ?></h1>
+<hr />
+<h2>Lokasi</h2>
+<div class="outerwide" >
+                        	<ul class="wnews" id="carousel2">
+                            	<li>
+                             <iframe
+    width="100%"
+    height="660px"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCJg5Vf56KX370PNral6Z3SC4x7MhkwBhU
+      &q=<?php echo $model->lokasi_tempat; ?>+Bandung, Jawa Barat, Indonesia
+	  &zoom=16
+      &attribution_source=Google+Maps+Embed+API
+    ">
+  </iframe>
+                            </ul>
+                        </div>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -28,6 +37,6 @@ $this->menu=array(
 		'sampai_jam',
 		'lokasi_tempat',
 		'keterangan',
-		'oleh_petugas',
+		//'oleh_petugas',
 	),
 )); ?>

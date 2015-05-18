@@ -40,6 +40,17 @@ $('.search-form form').submit(function(){
 		'keterangan',
 		'oleh_petugas',
 		*/
-		
+		array(
+			'class'=>'CButtonColumn',
+			'template'=>'{view}',
+			'buttons' => array(
+				
+				'view' => array(
+					'url' => 'Yii::app()->createUrl("/jadwalSim/view", array("id" => $data->kode_jadwal))',
+				),
+               
+			)
+			
+		),
 	),
 )); ?>
