@@ -46,7 +46,6 @@ class Pengaduan extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('kode_pengaduan, nama_pengadu, email, no_telp, isi_pengaduan, tanggal_pengaduan, lokasi, jenis_pengaduan, verifikasi', 'required'),
-			array('nama_pengadu, email, no_telp, isi_pengaduan, tanggal_pengaduan, lokasi, jenis_pengaduan', 'numerical', 'integerOnly'=>true),
 			array('kode_pengaduan', 'length', 'max'=>20),
 			array('verifikasi', 'length', 'max'=>8),
 			// The following rule is used by search().
@@ -111,9 +110,9 @@ class Pengaduan extends CActiveRecord
 		));
 	}
 	
-	public function generateid_Gangguan(){
+	public function generateid_Pengaduan(){
         $_d = date("y/m/");
-        $_i = "WB-";
+        $_i = "PN-";
         $_left = $_i . $_d;
         $_first = "0001";
         $_len = strlen($_left);
@@ -121,21 +120,19 @@ class Pengaduan extends CActiveRecord
       
         $last_po = $this->find(
                 array(
-                    "select"=>"nogangguan",
-                    "condition" => "left(nogangguan, " . $_len . ") = :_left",
+                    "select"=>"kode_pengaduan",
+                    "condition" => "left(kode_pengaduan, " . $_len . ") = :_left",
                     "params" => array(":_left" => $_left),
-                    "order" => "nogangguan DESC"
+                    "order" => "kode_pengaduan DESC"
                 ));
       
         if($last_po != null){
-            $_no = substr($last_po->nogangguan, $_len);
+            $_no = substr($last_po->kode_pengaduan, $_len);
             $_no++;
             $_no = substr("0000", strlen($_no)) . $_no;
             $no = $_left . $_no;
         }
         return $no;
     }
-	<?php echo $form->textField($model,'nogangguan',array('size'=>50,
-		'maxlength'=>50,'value' => (($model->isNewRecord) ? $model->generateid_gangguan() : $Gangguan->no), 'readonly'=>true)); ?>
 	
 }

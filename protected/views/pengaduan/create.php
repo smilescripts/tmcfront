@@ -6,11 +6,6 @@ $this->breadcrumbs=array(
 	'Pengaduans'=>array('index'),
 	'Create',
 );
-
-$this->menu=array(
-	array('label'=>'List Pengaduan', 'url'=>array('index')),
-	array('label'=>'Manage Pengaduan', 'url'=>array('admin')),
-);
 ?>
 
 <h1>Create Pengaduan</h1>
