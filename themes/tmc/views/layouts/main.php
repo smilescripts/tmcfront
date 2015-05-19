@@ -71,7 +71,7 @@
                             <li><a href="index.php?r=pengaduan/create">Keluhan Masyarakat.</a></li>
                          
                           
-                            <li><a href="#">Peta Kota Bandung.</a></li>
+                            <li><a href="index.php?r=berita/Peta">Peta Kota Bandung.</a></li>
                         </ul>
                         
                     </nav>

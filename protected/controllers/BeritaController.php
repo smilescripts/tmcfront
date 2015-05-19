@@ -28,7 +28,7 @@ class BeritaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','Peta'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -139,6 +139,18 @@ class BeritaController extends Controller
 			$model->attributes=$_GET['Berita'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+	
+	public function actionPeta()
+	{
+		$model=new Berita('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Berita']))
+			$model->attributes=$_GET['Berita'];
+
+		$this->render('peta',array(
 			'model'=>$model,
 		));
 	}
