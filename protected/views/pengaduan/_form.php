@@ -51,7 +51,7 @@
 	<div class="form">
 		<?php echo $form->labelEx($model,'isi_pengaduan'); ?>
 		<div class="input">
-		<?php echo $form->textArea($model,'isi_pengaduan',array('rows'=>3,'cols'=>1)); ?>
+		<?php echo $form->textArea($model,'isi_pengaduan',array('rows'=>1,'cols'=>11)); ?>
 		<?php echo $form->error($model,'isi_pengaduan'); ?>
 		</div>
 	</div>
@@ -78,9 +78,9 @@
 		<?php echo $form->error($model,'jenis_pengaduan'); ?>
 		</div>
 	</div>
-
+	<br/>
 	<div class="form2">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Kirim' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

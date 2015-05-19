@@ -37,14 +37,21 @@
                     	<h5 class="line" style="color:black"><span>Informasi Terpopuler.</span></h5>
                         <div class="outertight m-r-no">
                         	<ul class="block">
+                              <?php 
+								$viewberitap=mysql_query("select * from berita where status='aktif' order by tanggal_posting desc limit 10");
+								while($getberitap=mysql_fetch_object($viewberitap)){
+							?>
                                 <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/9.png" alt="MyPassion" class="alignleft" /></a>
+                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/5.png" alt="MyPassion" class="alignleft" /></a>
                                     <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                        <span><?php echo $getberitap->tanggal_posting ?></span>
+                                        <a href="#"><?php echo $getberitap->judul_berita ?></a>
                                     </p>
-                                    
+                                   
                                 </li>
+								
+								
+						  <?php } ?>
                               </ul>
                         </div>
                         

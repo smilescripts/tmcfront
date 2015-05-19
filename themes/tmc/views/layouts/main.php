@@ -4,6 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <?php
+	manual_connect();
 	$baseUrl = Yii::app()->theme->baseUrl;
 	  ?>
 <head>
@@ -160,34 +161,25 @@
                
                     
                     <div class="sidebar">
-                    	<div id="tabs">
+                    	<div id="tabs" style="height:400px;margin-top:-8px">
                             <ul>
                                 <li><a href="#tabs1" style="color:black">Keluhan Masyarakat.</a></li>
                             
                             </ul>
                             <div id="tabs1">
                                 <ul>
+								<?php 
+								$viewberita=mysql_query("select * from pengaduan where verifikasi='Diterima' order by tanggal_pengaduan desc limit 4");
+								while($getberita=mysql_fetch_object($viewberita)){
+							?>
                                 	<li>
                                     	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
                                         <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
                                         <span class="rating"><span style="width:70%;"></span></span>
                                     </li>
-                                    <li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
-                                    </li>
-                                    <li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
-                                    </li>
-                                    <li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
-                                    </li>
-                                </ul>
+									
+									<?php } ?>
+                               </ul>
                             </div>
                         </div>
                     </div>
