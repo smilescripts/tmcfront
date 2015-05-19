@@ -154,24 +154,7 @@
                 
                 <!-- Left Sidebar -->
                 <div class="column-one-third">
-                	<div class="sidebar">
-                    	<h5 class="line"><span>Stay Connected.</span></h5>
-                        <ul class="social">
-                        	<li>
-                            	<a href="#" class="facebook"><i class="icon-facebook"></i></a>
-                                <span>6,800 <br/> <i>fans</i></span>
-                            </li>
-                            <li>
-                            	<a href="#" class="twitter"><i class="icon-twitter"></i></a>
-                                <span>12,475 <br/> <i>followers</i></span>
-                            </li>
-                            <li>
-                            	<a href="#" class="rss"><i class="icon-rss"></i></a>
-                                <span><i>Subscribe via rss</i></span>
-                            </li>
-                        </ul>
-                    </div>
-                    
+                	
                  
                     
                
@@ -179,7 +162,7 @@
                     <div class="sidebar">
                     	<div id="tabs">
                             <ul>
-                                <li><a href="#tabs1">Keluhan Masyarakat.</a></li>
+                                <li><a href="#tabs1" style="color:black">Keluhan Masyarakat.</a></li>
                             
                             </ul>
                             <div id="tabs1">
@@ -231,8 +214,9 @@
 					
 					<div class="sidebar">
                     	<h5 class="line"><span>Twitter.</span></h5>
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fenvato&amp;width=298&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=%23BCBCBC&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:298px; height:258px;" allowTransparency="true"></iframe>
-                    </div>
+     <a class="twitter-timeline" href="https://twitter.com/tmc_restabesbdg" data-widget-id="600369633753862144">Tweet oleh @tmc_restabesbdg</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				  </div>
                 </div>
                 <!-- /Left Sidebar -->
                 
