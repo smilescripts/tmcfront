@@ -110,4 +110,32 @@ class Pengaduan extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function generateid_Gangguan(){
+        $_d = date("y/m/");
+        $_i = "WB-";
+        $_left = $_i . $_d;
+        $_first = "0001";
+        $_len = strlen($_left);
+        $no = $_left . $_first;
+      
+        $last_po = $this->find(
+                array(
+                    "select"=>"nogangguan",
+                    "condition" => "left(nogangguan, " . $_len . ") = :_left",
+                    "params" => array(":_left" => $_left),
+                    "order" => "nogangguan DESC"
+                ));
+      
+        if($last_po != null){
+            $_no = substr($last_po->nogangguan, $_len);
+            $_no++;
+            $_no = substr("0000", strlen($_no)) . $_no;
+            $no = $_left . $_no;
+        }
+        return $no;
+    }
+	<?php echo $form->textField($model,'nogangguan',array('size'=>50,
+		'maxlength'=>50,'value' => (($model->isNewRecord) ? $model->generateid_gangguan() : $Gangguan->no), 'readonly'=>true)); ?>
+	
 }
