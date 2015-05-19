@@ -63,7 +63,7 @@
                     <!-- Nav -->
                     <nav id="nav">
                         <ul class="sf-menu">
-                            <li class="current"><a href="index.php?r=site/index&home=true">Beranda.</a></li>
+                            <li class="current"><a href="index.php">Beranda.</a></li>
                           
                             <li><a href="index.php?r=profilInstansi/index">Visi Dan   Misi.</a></li>
                             <li><a href="index.php?r=jadwalSim/admin">Info Sim Keliling.</a></li>
@@ -82,8 +82,8 @@
         <!-- /Header -->
         
         <!-- Slider -->
-		<?php if(isset($_GET["home"])){?>
-        <section id="slider">
+		<?php if(!isset($_GET["r"])){?>
+	    <section id="slider">
             <div class="container">
                 <div class="main-slider">
                 	<div class="badg">
@@ -136,300 +136,13 @@
             </div>    
         </section>
 		<?php } ?>
-	    <!-- / Slider -->
-        <?php if(isset($_GET["home"])){?>
-        <section id="content">
-            <div class="container">
-            	<!-- Main Content -->
-                <div class="main-content">
-                	
-                    <!-- Popular News -->
-                	<div class="column-one-third">
-                    	<h5 class="line" style="color:black"><span>Informasi Berita Terbaru.</span></h5>
-                        <div class="outertight">
-                        	<ul class="block">
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/5.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:80%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/6.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:100%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/7.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:70%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/8.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:60%;"></span></span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <!-- /Popular News -->
-                    
-                    <!-- Hot News -->
-                    <div class="column-one-third">
-                    	<h5 class="line" style="color:black"><span>Informasi Terpopuler.</span></h5>
-                        <div class="outertight m-r-no">
-                        	<ul class="block">
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/9.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:80%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/10.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:100%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/11.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:70%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/12.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:60%;"></span></span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <!-- /Hot News -->
-                    
-                    <!-- Life Style -->
-                    <div class="column-two-third">
-                    	<h5 class="line" style="color:black">
-                        	<span>Jadwal Sim Keliling.</span>
-                            <div class="navbar">
-                                <a id="next1" class="next" href="#"><span></span></a>	
-                                <a id="prev1" class="prev" href="#"><span></span></a>
-                            </div>
-                        </h5>
-                        
-                        <div class="outertight">
-                        	  <img src="<?php echo $baseUrl;?>/img/sim-keliling02032013112716.jpg" alt="MyPassion" />
-                            <h6 class="regular"><a href="#">Blandit Rutrum, Erat et Sagittis. Lorem
-Ipsum Dolor, Sit Amet Adipsing.</a></h6>
-							<span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                            <p>Blandit rutrum, erat et egestas ultricies, dolor tortor egestas enim, quiste rhoncus sem purus eu sapien. Curabitur a orci nec risus lacinia vehic. Lorem ipsum 
-dolor adipcising elit. Erat egestan sagittis lorem aupo dolor sit ameta, auctor libero tempor...</p>
-                        </div>
-                        
-                        <div class="outertight m-r-no">
-                        	
-                        	<ul class="block" id="carousel">
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/13.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:80%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/14.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:100%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/15.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:70%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/16.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:60%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/11.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:70%;"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/12.png" alt="MyPassion" class="alignleft" /></a>
-                                    <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
-                                    </p>
-                                    <span class="rating"><span style="width:60%;"></span></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /Life Style -->
-                    
-                    <!-- World News -->
-                    <div class="column-two-third">
-                    	<h5 class="line" style="color:black">
-                        	<span>Peta Bandung.</span>
-                            <div class="navbar">
-                                <a id="next2" class="next" href="#"><span></span></a>	
-                                <a id="prev2" class="prev" href="#"><span></span></a>
-                            </div>
-                        </h5>
-                        
-                        <div class="outerwide" >
-                        	<ul class="wnews" id="carousel2">
-                            	<li>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="600" height="450" frameborder="0" style="border:0"></iframe> </li>
-                              
-                            </ul>
-                        </div>
-                        
-                     </div>
-                    <!-- /World News -->
-                    
-                    <!-- Popular News -->
-                
-                    <!-- /Popular News -->
-                    
-                </div>
-                <!-- /Main Content -->
-                
-                <!-- Left Sidebar -->
-                <div class="column-one-third">
-                	<div class="sidebar">
-                    	<h5 class="line" style="color:black"><span>Stay Connected.</span></h5>
-                        <ul class="social">
-                        	<li>
-                            	<a href="#" class="facebook"><i class="icon-facebook"></i></a>
-                                <span>6,800 <br/> <i>fans</i></span>
-                            </li>
-                            <li>
-                            	<a href="#" class="twitter"><i class="icon-twitter"></i></a>
-                                <span>12,475 <br/> <i>followers</i></span>
-                            </li>
-                            <li>
-                            	<a href="#" class="rss"><i class="icon-rss"></i></a>
-                                <span><i>Subscribe via rss</i></span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                 
-                    
-               
-                    
-                    <div class="sidebar">
-                    	<div id="tabs">
-                            <ul>
-                                <li><a style="color:black" href="#tabs1">Keluhan Masyarakat.</a></li>
-                            
-                            </ul>
-                            <div id="tabs1">
-                                <ul>
-                                	<li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
-                                    </li>
-                                    <li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
-                                    </li>
-                                    <li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
-                                    </li>
-                                    <li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                  
-                    
-                 
-                	
-                    <div class="sidebar">
-                    	<h5 class="line" style="color:black"><span>Facebook.</span></h5>
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fenvato&amp;width=298&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=%23BCBCBC&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:298px; height:258px;" allowTransparency="true"></iframe>
-                    </div>
-					<div class="sidebar">
-                    	<h5 class="line" style="color:black"><span>Twitter.</span></h5>
-                        <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fenvato&amp;width=298&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=%23BCBCBC&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:298px; height:258px;" allowTransparency="true"></iframe>
-                    </div>
-                </div>
-                <!-- /Left Sidebar -->
-                
-            </div>    
-        </section>
-        <!-- / Content -->
-        <?php } ?> 
 		
-		
-		 <?php if(!isset($_GET["home"])){?>
         <section id="content" >
             <div class="container">
             	<!-- Main Content -->
                 <div class="main-content">
-                 <div class="column-two-third">
-                    	<h5 class="line" >
-                        	<span></span>
-                            <div class="navbar">
-                            
-                            </div>	
-                        </h5>
-                        <div class="outerwide">
-                        	<ul class="block3" >
-                                <li>
-                                  	<?php echo $content;?>
-                                </li>
-                         </ul>
-                        </div>
-                    </div>
+				<?php echo $content;?>
+                 
                     <!-- /World News -->
                     
                     <!-- Popular News -->
@@ -514,7 +227,7 @@ dolor adipcising elit. Erat egestan sagittis lorem aupo dolor sit ameta, auctor 
             </div>    
         </section>
         <!-- / Content -->
-        <?php } ?> 
+  
         <!-- Footer -->
         <footer id="footer">
             <div class="container">
