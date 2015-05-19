@@ -55,7 +55,7 @@
 					  <a href="index.html"><img src="<?php echo $baseUrl;?>/img/polda_logo.png" alt="MyPassion" style="position:absolute" /></a>
 					 </div>
 					<BR/>
-                    <CENTER >
+                    <CENTER>
                        <h2 style="margin-left:140px;color:black">TRAFFIC MANAGEMENT CENTER<br/>SATLANTAS POLRESTABES<br/><div  style="margin-left:-130px">BANDUNG</div></h2>
 					   <p>Jln.Jawa no.1 telp 991</p>
                     </CENTER>
@@ -166,18 +166,19 @@
                                 <li><a href="#tabs1" style="color:black">Keluhan Masyarakat.</a></li>
                             
                             </ul>
-                            <div id="tabs1">
+                            <div id="tabs1" style="height: 350px;overflow: scroll;">
                                 <ul>
 								<?php 
-								$viewberita=mysql_query("select * from pengaduan where verifikasi='Diterima' order by tanggal_pengaduan desc limit 4");
-								while($getberita=mysql_fetch_object($viewberita)){
+								$keluhan=mysql_query("select * from pengaduan where verifikasi='Diterima' order by tanggal_pengaduan desc limit 4");
+								while($getkeluhan=mysql_fetch_object($keluhan)){
 							?>
                                 	<li>
-                                    	<a href="#" class="title">Blandit Rutrum, Erat et Sagittis Adipcising Elit.</a>
-                                        <span class="meta">26 May, 2013.   \\   <a href="#">World News.</a>   \\   <a href="#">No Coments.</a></span>
-                                        <span class="rating"><span style="width:70%;"></span></span>
+                                   
+                                    	<a href="#" class="title"><?php echo $getkeluhan->tanggal_pengaduan; ?></a>
+                                         <span class="meta"><?php echo substr($getkeluhan->isi_pengaduan,0,40); ?><a> Selengkapnya </a></span>
+                                       
                                     </li>
-									
+									<hr/>
 									<?php } ?>
                                </ul>
                             </div>
