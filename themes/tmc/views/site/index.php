@@ -1,5 +1,6 @@
 
 <?php
+	manual_connect();
 	$baseUrl = Yii::app()->theme->baseUrl;
 ?>
 
@@ -10,14 +11,21 @@
                     	<h5 class="line" style="color:black"><span>Informasi Berita Terbaru.</span></h5>
                         <div class="outertight">
                         	<ul class="block">
+							<?php 
+								$viewberita=mysql_query("select * from berita where status='aktif' order by tanggal_posting desc limit 10");
+								while($getberita=mysql_fetch_object($viewberita)){
+							?>
                                 <li>
                                     <a href="#"><img src="<?php echo $baseUrl;?>/img/trash/5.png" alt="MyPassion" class="alignleft" /></a>
                                     <p>
-                                        <span>26 May, 2013.</span>
-                                        <a href="#">Blandit Rutrum, Erat et Sagittis.</a>
+                                        <span><?php echo $getberita->tanggal_posting ?></span>
+                                        <a href="#"><?php echo $getberita->judul_berita ?></a>
                                     </p>
-                                    <span class="rating"><span style="width:80%;"></span></span>
+                                   
                                 </li>
+								
+								
+						  <?php } ?>
                           </ul>
                         </div>
                         
