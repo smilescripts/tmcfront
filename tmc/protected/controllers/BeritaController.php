@@ -92,6 +92,7 @@ class BeritaController extends Controller
 						
 						
 					}
+					/*
 						// twitter
 				
 						require_once('codebird/src/codebird.php');
@@ -149,7 +150,7 @@ class BeritaController extends Controller
 						
 						//end of facebook
 						
-				
+				*/
 				$this->redirect(array('view','id'=>$model->kode_berita));
 			}
 		}

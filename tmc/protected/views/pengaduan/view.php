@@ -64,7 +64,7 @@ if($model->verifikasi!="Diterima"){
 if(isset($_POST["ubah"])){
 	$sql = "UPDATE `pengaduan` SET `verifikasi`= '{$_POST['verifikasi']}' WHERE `kode_pengaduan` = '$model->kode_pengaduan'"; 
 						mysql_query($sql) or die(mysql_error()); 
-						
+	/*					
 	if($_POST['verifikasi']=="Diterima"){
 	
 	// twitter
@@ -126,7 +126,7 @@ if(isset($_POST["ubah"])){
 	
 	
 	}					
-						
+		*/				
 						
 	echo "<script>window.location='?r=Pengaduan/admin'</script>";
 
