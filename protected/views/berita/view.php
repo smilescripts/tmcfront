@@ -7,26 +7,40 @@ $this->breadcrumbs=array(
 	$model->kode_berita,
 );
 
-$this->menu=array(
-	array('label'=>'List Berita', 'url'=>array('index')),
-	array('label'=>'Create Berita', 'url'=>array('create')),
-	array('label'=>'Update Berita', 'url'=>array('update', 'id'=>$model->kode_berita)),
-	array('label'=>'Delete Berita', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->kode_berita),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Berita', 'url'=>array('admin')),
-);
+
 ?>
 
-<h1>View Berita #<?php echo $model->kode_berita; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'kode_berita',
-		'judul_berita',
-		'isi_berita',
-		'tanggal_posting',
-		'oleh_petugas',
-		'status',
-		'kategori_berita',
-	),
-)); ?>
+    <div class="column-two-third single">
+                    	
+                      <img src="tmc/foto/berita/<?php echo $model->kode_berita ?>/<?php echo $model->foto ?>" style="width:100%;height:450px" alt="MyPassion" class="alignleft" />
+                        <h3 class="title" style="color:black"><?php echo $model->judul_berita;?></h3><hr/>
+                        <span class="meta"><?php echo $model->tanggal_posting;?></span>
+                        <p><?php echo $model->isi_berita;?></p>
+                        
+                        
+                     
+                        
+                        <div class="relatednews">
+                            <h5 class="line"><span>Berita Terbaru.</span></h5>
+                            <ul>
+							  <?php 
+							  manual_connect();
+								$viewberitap=mysql_query("select * from berita where status='aktif' and kode_berita!='$_GET[id]' order by tanggal_posting desc limit 4 ");
+								while($getberitap=mysql_fetch_object($viewberitap)){
+							?>
+                                <li>
+                                   <img src="tmc/foto/berita/<?php echo $getberitap->kode_berita ?>/<?php echo $getberitap->foto ?>" style="width:140px;height:86px" alt="MyPassion" />
+                                    <p>
+                                        <span><?php echo $getberitap->tanggal_posting ?></span>
+                                      <a href="index.php?r=berita/view&id=<?php echo $getberitap->kode_berita ?>"><?php echo $getberitap->judul_berita ?></a>
+                                    </p>
+                                   
+                                </li>
+								<?php } ?>
+                             </ul>
+                        </div>
+                        
+                        
+                   </div>
+                 

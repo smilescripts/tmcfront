@@ -13,14 +13,14 @@
                         <div class="outertight">
                         	<ul class="block">
 							<?php 
-								$viewberita=mysql_query("select * from berita where status='aktif' order by tanggal_posting desc limit 10");
+								$viewberita=mysql_query("select * from berita where status='aktif' order by tanggal_posting desc limit 7");
 								while($getberita=mysql_fetch_object($viewberita)){
 							?>
                                 <li>
-                                  <a href="#"><img src="<?php echo $root;?>/foto/berita/<?php echo $getberita->kode_berita ?>/<?php echo $getberita->foto ?>" style="width:140px;height:86px" alt="MyPassion" class="alignleft" /></a>
+                                  <a href="index.php?r=berita/view&id=<?php echo $getberita->kode_berita ?>"><img src="<?php echo $root;?>/tmc/foto/berita/<?php echo $getberita->kode_berita ?>/<?php echo $getberita->foto ?>" style="width:140px;height:86px" alt="MyPassion" class="alignleft" /></a>
                                     <p>
                                         <span><?php echo $getberita->tanggal_posting ?></span>
-                                        <a href="#"><?php echo $getberita->judul_berita ?></a>
+                                        <a href="index.php?r=berita/view&id=<?php echo $getberita->kode_berita ?>"><?php echo $getberita->judul_berita ?></a>
                                     </p>
                                    
                                 </li>
@@ -39,14 +39,14 @@
                         <div class="outertight m-r-no">
                         	<ul class="block">
                               <?php 
-								$viewberitap=mysql_query("select * from berita where status='aktif' order by akses desc limit 10");
+								$viewberitap=mysql_query("select * from berita where status='aktif' order by akses desc limit 7");
 								while($getberitap=mysql_fetch_object($viewberitap)){
 							?>
                                 <li>
-                                    <a href="#"><img src="<?php echo $root;?>/foto/berita/<?php echo $getberitap->kode_berita ?>/<?php echo $getberitap->foto ?>" style="width:140px;height:86px" alt="MyPassion" class="alignleft" /></a>
+                                    <a href="index.php?r=berita/view&id=<?php echo $getberitap->kode_berita ?>"><img src="<?php echo $root;?>/tmc/foto/berita/<?php echo $getberitap->kode_berita ?>/<?php echo $getberitap->foto ?>" style="width:140px;height:86px" alt="MyPassion" class="alignleft" /></a>
                                     <p>
                                         <span><?php echo $getberitap->tanggal_posting ?></span>
-                                        <a href="#"><?php echo $getberitap->judul_berita ?></a>
+                                        <a href="index.php?r=berita/view&id=<?php echo $getberitap->kode_berita ?>"><?php echo $getberitap->judul_berita ?></a>
                                     </p>
                                    
                                 </li>
